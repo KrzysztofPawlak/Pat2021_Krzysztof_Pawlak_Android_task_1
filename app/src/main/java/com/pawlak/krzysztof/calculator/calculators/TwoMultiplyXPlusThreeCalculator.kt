@@ -1,12 +1,12 @@
 package com.pawlak.krzysztof.calculator.calculators
 
-class TwoMultiplyXPlusThreeCalculator : OneArgumentCalculator {
+class TwoMultiplyXPlusThreeCalculator : CalculableUnary {
 
-    override fun calculate(arg: Int): Int {
-        return 2 * arg + 3
+    override fun calculate(input: Int): Int {
+        return 2 * input + 3
     }
 
-    override fun showInfo(): String {
-        return "2 * x + 3 = y"
+    override fun getMaxInput(): Int {
+        return (Int.MAX_VALUE / 2) - 3
     }
 }

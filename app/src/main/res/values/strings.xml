@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Calculator</string>
+    <string name="text_result">Result</string>
+    <string name="button_text_2_x_plus_3">2 x + 3</string>
+    <string name="button_text_fibonacci">Fibonacci</string>
+    <string name="text_input">Input</string>
+    <string name="text_validation_max_element_fibonacci">Sorry cannot calculate higher than 46 element for this sequence.</string>
+    <string name="text_processing">Processing…</string>
+    <string name="text_validation_error">Incorrect input. Should Be Integer.</string>
+    <string name="text_validation_input_size_error">Sorry input exceed max supported value: </string>
 </resources>
