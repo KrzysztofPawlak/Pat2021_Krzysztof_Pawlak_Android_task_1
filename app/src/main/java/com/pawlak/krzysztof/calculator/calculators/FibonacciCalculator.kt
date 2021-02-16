@@ -6,6 +6,7 @@ class FibonacciCalculator : CalculableUnary {
     private val maxNNumberThatCanBeStoredInInt = 46
 
     override fun calculate(input: Int): Int {
+        isCancelled = false
         val firstElement = 0
         val secondElement = 1
         return calc(input, firstElement, secondElement)
@@ -25,5 +26,9 @@ class FibonacciCalculator : CalculableUnary {
 
     override fun getMaxInput(): Int {
         return maxNNumberThatCanBeStoredInInt
+    }
+
+    fun cancel() {
+        isCancelled = true
     }
 }

@@ -45,6 +45,11 @@ class FibonacciAsyncCalculator(context: MainActivity) : CalculableUnary {
                 if (activity == null || activity.isFinishing) return
                 activity.setResult(result.toString())
             }
+
+            override fun onCancelled() {
+                super.onCancelled()
+                calculator.cancel()
+            }
         }
     }
 }
