@@ -6,7 +6,7 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.pawlak.krzysztof.calculator.calculators.CalculableUnary
-import com.pawlak.krzysztof.calculator.calculators.FibonacciCalculator
+import com.pawlak.krzysztof.calculator.calculators.FibonacciAsyncCalculator
 import com.pawlak.krzysztof.calculator.calculators.TwoMultiplyXPlusThreeCalculator
 
 class MainActivity : AppCompatActivity() {
@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var button: Button
     private lateinit var buttonFibonacci: Button
     private val BUNDLE_OUTPUT_KEY = "output"
-    private lateinit var fibonacciCalculator: FibonacciCalculator
+    private lateinit var fibonacciCalculator: FibonacciAsyncCalculator
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         output = findViewById(R.id.result)
         button = findViewById(R.id.button)
         buttonFibonacci = findViewById(R.id.button2)
-        fibonacciCalculator = FibonacciCalculator(this)
+        fibonacciCalculator = FibonacciAsyncCalculator(this)
 
         setOnClick(button, TwoMultiplyXPlusThreeCalculator())
         setOnClick(buttonFibonacci, fibonacciCalculator)
